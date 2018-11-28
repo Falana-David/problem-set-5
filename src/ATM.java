@@ -12,4 +12,32 @@
 
 public class ATM {
 	
+	
+	private Database database;
+	
+	public static void main(String[] args)
+	{
+		ATM atm = new ATM(new Database());
+		atm.run();
+	}
+
+	public ATM(Database database)
+	{
+		this.database = database;
+	}
+	
+	
+
+	private void run() {
+		try {
+			BankAccount account = this.database.getAccount(100000001L);
+			System.out.println(account.get_account_number());
+			System.out.println(account.get_User().get_city());
+
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 }

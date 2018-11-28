@@ -18,13 +18,13 @@
 	//}
 //}
 public class User {
-	private static int generated_pin_number = 1234I;
+	private static int generated_pin_number = 1234;
 	
 	private String first_name;
 	private String last_name;
 	private int pin_number;
 	private String dob;
-	private int phone_number;
+	private long phone_number;
 	private String location;
 	private String city;
 	private String state;
@@ -32,9 +32,9 @@ public class User {
 	
 	
 	
-	public User(String first_name,String last_name, int pin_number, String dob, int phone_number, String location, String city, String state, int zip_code) {
+	public User(String first_name,String last_name, int pin_number, String dob, long phone_number, String location, String city, String state, int zip_code) {
 
-		this.accountNumber = BankAccount.generatedAccountNumber++;
+		//this.accountNumber = BankAccount.generatedAccountNumber++;
 
 		this.first_name = first_name;
 		this.last_name = last_name;
@@ -64,7 +64,7 @@ public class User {
 		return dob;
 	}
 	
-	public int get_phone_number() {
+	public long get_phone_number() {
 		return phone_number;
 	}
 	
