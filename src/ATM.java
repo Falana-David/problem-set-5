@@ -30,8 +30,7 @@ public class ATM {
 
 	private void run() {
 		try {
-			BankAccount account = this.database.getAccount(100000001L);
-			System.out.println(account.get_account_number());
+			BankAccount account = this.database.getAccount(100000002L);
 			System.out.println(account.get_User().get_city());
 
 		}
