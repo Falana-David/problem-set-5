@@ -14,15 +14,6 @@ import java.io.FileWriter;
 
 public class Database {
 	
-	public static void main(String[] args) {
-		Database db = new Database();
-		try {
-			db.getAccount(123L);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
 	public BankAccount getAccount(long accountNumber) throws Exception
 	{
 		BankAccount account = null;
