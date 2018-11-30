@@ -12,11 +12,11 @@ public class BankAccount {
 	private static long generatedAccountNumber = 100000001L;
 	
 	private long account_number;
-	private int balance;
+	private double balance;
 	private User User;
 	
-	public BankAccount(long account_number, int balance, User User) {
-		this.account_number = BankAccount.generatedAccountNumber++;
+	public BankAccount(long account_number, double balance, User User) {
+		this.account_number = account_number;
 		this.balance = balance;
 		this.User = User;
 	}
@@ -25,7 +25,7 @@ public class BankAccount {
 		return account_number;
 	}
 	
-	public int get_balance() {
+	public double get_balance() {
 		return balance;
 	}
 	
@@ -40,29 +40,30 @@ public class BankAccount {
 	public void set_User(User User) {
 		this.User = User;
 	}
+
+
 	
 
 	public int deposit(double amount) {
 		if (amount <= 0) {
 			return 0;
-		} else {
+		}
+		
+		else {
 			balance = balance + amount;
 			return 1;
 		}
 	}
 
-
 	public int withdraw(double amount) {
 		if (amount > balance) {
 			return 0;
-		} else if (amount <= 0) {
+	} else if (amount <= 0) {
 			return 1;
-		} else {
+	} else {
 			balance = balance - amount;
 			return 2;
 		}
 	}
-
-}
 
 }
