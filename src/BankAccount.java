@@ -41,9 +41,6 @@ public class BankAccount {
 		this.User = User;
 	}
 
-
-	
-
 	public int deposit(double amount) {
 		if (amount <= 0) {
 			return 0;
